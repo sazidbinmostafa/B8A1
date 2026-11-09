@@ -80,7 +80,7 @@ class Manager extends Employee {
 
 // Problem: 08
 const validateAgeAsync = async (age: number): Promise<string> => {
-  return new Promise((resolve, reject) => {
+  return new Promise<string>((resolve, reject) => {
     if (age >= 18) {
       setTimeout(() => {
         resolve("Access Granted");
